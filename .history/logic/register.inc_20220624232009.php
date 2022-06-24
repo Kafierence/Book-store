@@ -18,15 +18,15 @@ if(isset($_POST["submit"])){
         exit();
     }
     if(invalidEmail($email)==true){
-        header("location: ../register.php?error=invalidEmail");
+        header("location: ../pages/register.php?error=invalidEmail");
         exit();
     }
     if(!isMatchPassword($password,$confirmPass)){
-        header("location: ../register.php?error=invalidConfirm");
+        header("location: ../pages/register.php?error=invalidConfirm");
         exit();
     }
     if(isExistUser($conn,$email)){
-        header("location: ../register.php?error=existAccount");
+        header("location: ../pages/register.php?error=existAccount");
         exit();
     }
     

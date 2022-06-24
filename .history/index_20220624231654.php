@@ -21,7 +21,7 @@
                             <p class="hero__sub-title">Khám phá thế giới tri thức của bạn</p>
                         </div>
                         <section class="login__region">
-                            <form class="form" method="POST" action="../logic/login.inc.php">
+                            <form class="form" method="POST" action="/logic/login.inc.php">
                                 <div class="form-group">
                                     <label for="email" class="input__title" 
                                         >Email</label

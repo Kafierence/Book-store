@@ -19,9 +19,10 @@
                         <div class="hero">
                             <h3 class="hero__title">Đăng ký</h3>
                             <p class="hero__sub-title">Sẵn sàng khám phá thế giới tri thức của bạn</p>
+                    
                         </div>
                         <section class="register__region">
-                            <form class="form">
+                            <form class="form" action="/logic/register.inc.php" method="POST">
                                 <div class="form-group">
                                     <label for="name" class="input__title"
                                         >Họ và tên</label
@@ -31,7 +32,17 @@
                                         type="text"
                                         id="name"
                                         placeholder="Họ và tên"
+                                        name="userName"
+                                        require
                                     />
+                                      <?php
+
+                                        if (isset($_GET["error"])) {
+                                            if ($_GET["error"] == "invalidName") {
+                                                echo "<p class='text-danger'>Please Type valid Name ( not special character and number)</p>";
+                                            }
+                                        }
+                                   ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="address" class="input__title"
@@ -41,7 +52,9 @@
                                         class="input-text-field"
                                         type="text"
                                         id="address"
+                                        name="userAddress"
                                         placeholder="Địa chỉ"
+                                        require
                                     />
                                 </div>
                                 <div class="form-group">
@@ -52,8 +65,17 @@
                                         class="input-text-field"
                                         type="text"
                                         id="email"
+                                        name="userEmail"
                                         placeholder="Email"
                                     />
+                                       <?php
+
+                                        if (isset($_GET["error"])) {
+                                            if ($_GET["error"] == "invalidEmail") {
+                                                echo "<p class='text-danger'>Please Enter Valid Email</p>";
+                                            }
+                                        }
+                                   ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="input__title"
@@ -63,6 +85,7 @@
                                         class="input-text-field"
                                         type="password"
                                         id="password"
+                                        name="userPassword"
                                         placeholder="Mật khẩu"
                                     />
                                 </div>
@@ -74,15 +97,32 @@
                                         class="input-text-field"
                                         type="password"
                                         id="password-confirm"
+                                        name="userConfirmPassword"
                                         placeholder="Nhập lại mật khẩu"
                                     />
                                 </div>
-                                <div class="btn btn-rounded btn-primary mt-3">
+                                <?php
+
+                                if (isset($_GET["error"])) {
+                                    if ($_GET["error"] == "emptyinput") {
+                                        echo "<p class='text-danger'>Please Full fill fields</p>";
+                                    }
+                                    else if($_GET["error"] == "invalidConfirm"){
+                                        echo "<p class='text-danger'>Please Enter the same password and confirm password</p>";
+
+                                    }
+                                    else if($_GET["error"]=="existAccount"){
+                                        echo "<p class='text-danger'>This Email Account already created</p>";
+                                    }
+                                }
+                                   ?>
+                              
+                                <button type="submit" name="submit"  class="btn btn-rounded btn-primary mt-3">
                                     Đăng ký
-                                </div>
+                                </button >
                             </form>
                             <div class="nav-group">
-                                <a href="./login.html" class="nav__link">Quay lại đăng nhập</a>
+                                <a href="./login.php" class="nav__link">Quay lại đăng nhập</a>
                             </div>
                         </section>
                     </div>

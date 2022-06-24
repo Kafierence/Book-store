@@ -49,7 +49,7 @@ function isExistUser($conn,$email){
     $sql="SELECT * FROM users WHERE  usersEmail=?; ";
     $statement=mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($statement,$sql)){
-        header("location: ../register.php?error==smtFailed");
+        header("location: ../pages/register.php?error==smtFailed");
         exit();
     }
     mysqli_stmt_bind_param($statement,"s",$email);
@@ -77,7 +77,7 @@ function  createUser($conn,$name,$address,$email,$password){
     mysqli_stmt_bind_param($statement,"ssss",$name,$email,$hashedPassword,$address);
     mysqli_stmt_execute($statement);
     mysqli_stmt_close($statement);
-    header("location: ../index.php");
+    header("location: ../login.php");
     exit();
 
 }
@@ -85,13 +85,13 @@ function  createUser($conn,$name,$address,$email,$password){
 function    loginWithEmailPassword($conn,$email,$password){
     $existUser=isExistUser($conn,$email);
     if($existUser==false){
-        header("location: ../index.php?error=wrongExist");
+        header("location: ../login.php?error=wrongExist");
         exit();
     }
    $passHashed=$existUser["usersPwd"];
    $checkPwd=password_verify($password,$passHashed);
    if($checkPwd==false){
-    header("location: ../index.php?error=wrongExist");
+    header("location: ../login.php?error=wrongExist");
     exit();
    }
    else if($checkPwd==true){
