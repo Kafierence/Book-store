@@ -1,7 +1,7 @@
 <?php
-$serverName="MYSQL5044.site4now.net";
-$DBUserName="a88fa3_binnam0";
-$DBPassword="Tongvannam1@";
+$serverName="";
+$DBUserName="root";
+$DBPassword="";
 $DBName="db_a88fa3_binnam0";
 
 $conn= mysqli_connect($serverName,$DBUserName,$DBPassword,$DBName);
