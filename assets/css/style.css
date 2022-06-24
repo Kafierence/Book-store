@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* LOGIN AND REGISTER REGION */
+.login__container,
+.register__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+.header {
+    font-size: 32px;
+    font-weight: 500;
+    padding: 10px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero__title {
+    /* padding: 10px; */
+}
+.hero__sub-title {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+}
+.login__region,
+.register__region {
+    padding: 10px;
+}
+/* FORM LOGIN/REGISTER */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.625rem;
+}
+.input__title {
+    display: none;
+}
+.input-text-field {
+    border: none;
+    padding: 0.625rem 1rem;
+    background-color: #eaeaea;
+    border-radius: 100vmin;
+    min-width: 15.625rem;
+}
+.btn-rounded {
+    border-radius: 100vmin;
+}
+/* REDIRECTOR LINK */
+.nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.625rem;
+    padding-top: 0;
+}
+.nav__link {
+    font-size: 0.875rem;
+    margin: 0;
+    transition: color 300ms ease;
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
+}
+.nav__link:hover {
+    color: #007bff;
+}
+/* SOCIAL LOGIN OPTIONS */
+.btn-group-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-social__login {
+    cursor: pointer;
+    background-color: #eaeaea;
+    border-radius: 100vmin;
+    padding: 0.625rem 0;
+    margin: 1rem 0.625rem;
+
+    min-width: 16.875em;
+    max-width: 16.875em;
+    width: 16.875em;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.btn-social__login:hover {
+    filter: brightness(0.95);
+}
+.social__icon {
+    margin-left: 1.875rem;
+    margin-right: 0.625rem;
+}
+.social__title {
+    margin: 0;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 27.5rem) {
+    .login__container, .register__container {
+        margin-top: 2.5rem;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3.75rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input__title {
+        display: inline-block;
+    }
+    .input-text-field {
+        min-width: 28.125rem;
+    }
+    .btn-social__login {
+        max-width: 16.875em;
+    }
+}
