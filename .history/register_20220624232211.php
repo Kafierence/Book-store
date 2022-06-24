@@ -122,7 +122,7 @@
                                 </button >
                             </form>
                             <div class="nav-group">
-                                <a href="index.php" class="nav__link">Quay lại đăng nhập</a>
+                                <a href="login.php" class="nav__link">Quay lại đăng nhập</a>
                             </div>
                         </section>
                     </div>
