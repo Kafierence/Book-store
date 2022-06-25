@@ -722,9 +722,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-md-6 order-md-1">
-                            <div class="contact-banner">
-
-                            </div>
+                            <div class="contact-banner"></div>
                         </div>
                     </div>
                 </section>
@@ -735,22 +733,13 @@
                <section class="banner_section">
                              <div class="row">
                                 <div class="col-12 col-md-6">
-                                  <div class="banner-1">
-
-                                  </div>
-
-                                </div>
-                                <div class="col-12 col-md-6">
-                                   <div class="banner-2">
-
-                                   </div>
-
+                                    
                                 </div>
                              </div>                       
                </section>
             </div>
         </main>
-        <footer class="container-fluid footer mt-5">
+        <footer class="container-fluid footer">
             <div class="row">
                 <div class="col-12">
                     <div class="row footer-container">
