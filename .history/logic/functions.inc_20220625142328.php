@@ -98,7 +98,7 @@ function    loginWithEmailPassword($conn,$email,$password){
     session_start();
     $_SESSION["userEmail"]=$existUser["usersEmail"];
     $_SESSION["userID"]=$existUser["userID"];
-   $_SESSION["userName"]=$existUser["usersName"];
+    $_SESSION["userName"]=$existUser["usersName"];
     header("location:../home.php");
     exit();
    }

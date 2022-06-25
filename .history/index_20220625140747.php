@@ -18,8 +18,8 @@
                             <div class="logo"></div>
                         </header>
                         <div class="hero">
-    
-
+                            <?php echo password_hash("123456
+",PASSWORD_DEFAULT); ?>
                             <h3 class="hero__title">Đăng nhập</h3>
                             <p class="hero__sub-title">Khám phá thế giới tri thức của bạn</p>
                         </div>

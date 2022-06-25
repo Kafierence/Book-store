@@ -10,7 +10,6 @@
     </head>
     <body>
         <div class="container">
-            
             <div class="row">
                 <div class="col-12">
                     <div class="login__container">
@@ -18,8 +17,6 @@
                             <div class="logo"></div>
                         </header>
                         <div class="hero">
-    
-
                             <h3 class="hero__title">Đăng nhập</h3>
                             <p class="hero__sub-title">Khám phá thế giới tri thức của bạn</p>
                         </div>

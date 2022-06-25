@@ -10,7 +10,6 @@
     </head>
     <body>
         <div class="container">
-            
             <div class="row">
                 <div class="col-12">
                     <div class="login__container">
@@ -18,8 +17,6 @@
                             <div class="logo"></div>
                         </header>
                         <div class="hero">
-    
-
                             <h3 class="hero__title">Đăng nhập</h3>
                             <p class="hero__sub-title">Khám phá thế giới tri thức của bạn</p>
                         </div>
@@ -36,16 +33,6 @@
                                         name="userEmail"
                                         placeholder="Email"
                                     />
-                                    <?php
-                                           if (isset($_GET["error"])) {
-                                            if ($_GET["error"] == "invalidEmail") {
-                                                echo "<p class='text-danger'>Email Invalid Type! </p>";
-                                            }
-                                          
-                                        }
-                                    
-                                    
-                                    ?>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="input__title"
@@ -64,7 +51,9 @@
                                     if ($_GET["error"] == "wrongExist") {
                                         echo "<p class='text-danger'>Email or Password Incorrect! </p>";
                                     }
-                                  
+                                    if ($_GET["error"] == "invalidEmail") {
+                                        echo "<p class='text-danger'>Email Invalid </p>";
+                                    }
                                 }
                                 
                                 
