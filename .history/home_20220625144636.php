@@ -1,8 +1,4 @@
 
-<?php if(!isset($_SESSION["userID"])){
-    header("location:../index.php");
-   
-} ?>
 <?php session_start() ?>
 
 <!DOCTYPE html>
