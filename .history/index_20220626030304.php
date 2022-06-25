@@ -39,7 +39,7 @@
                                     <?php
                                            if (isset($_GET["error"])) {
                                             if ($_GET["error"] == "invalidEmail") {
-                                                echo "<p class='text-danger'>Email sai định dạng </p>";
+                                                echo "<p class='text-danger'>Email Invalid Type! </p>";
                                             }
                                           
                                         }
@@ -62,7 +62,7 @@
                                 <?php 
                                  if (isset($_GET["error"])) {
                                     if ($_GET["error"] == "wrongExist") {
-                                        echo "<p class='text-danger'>EMail hoặc mật khẩu sai! </p>";
+                                        echo "<p class='text-danger'>Email or Password Incorrect! </p>";
                                     }
                                   
                                 }

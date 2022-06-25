@@ -72,7 +72,7 @@
 
                                         if (isset($_GET["error"])) {
                                             if ($_GET["error"] == "invalidEmail") {
-                                                echo "<p class='text-danger'>Vui lòng nhập đúng định dạng email</p>";
+                                                echo "<p class='text-danger'>Please Enter Valid Email</p>";
                                             }
                                         }
                                    ?>
