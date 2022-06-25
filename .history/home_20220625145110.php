@@ -1,5 +1,8 @@
 
-
+<?php if(!isset($_SESSION["userID"])){
+    header("location:../index.php");
+   else{
+} 
 <?php session_start() ?>
 
 <!DOCTYPE html>
@@ -911,4 +914,5 @@
         </footer>
     </body>
 </html>
-                                           
+                                                }
+                                                ?>
