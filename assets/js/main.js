@@ -44,5 +44,12 @@ dropDown.onclick = function () {
     }
 };
 
-console.log(dropDown);
-console.log(menudropDown);
+// Banner animation
+const bannerList = document.querySelectorAll('[data-banner]');
+let bannerIndex = 0;
+const bannerIntervalId = setInterval(() => {
+    bannerList[bannerIndex].classList.remove('banner-item--active');
+    bannerIndex++;
+    if (bannerIndex === 3) bannerIndex = 0;
+    bannerList[bannerIndex].classList.add('banner-item--active');
+}, 3000);
